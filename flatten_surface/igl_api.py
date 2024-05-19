@@ -1,13 +1,11 @@
 import igl
 import numpy as np
 
-from flatten_surface.geometry import plane_through_3_points, rotate_points, rotation_matrix_from_vectors, \
+from .geometry import plane_through_3_points, rotate_points, rotation_matrix_from_vectors, \
     plane_normal_vector, find_boundary_loop
 
 
-def init_unfold(vertices, faces, id_vertex=None):
-    if id_vertex is None:
-        id_vertex = 0
+def init_unfold(vertices, faces, id_vertex):
     init_points_ids = np.array(faces[id_vertex], dtype=np.int64)
     x1 = vertices[init_points_ids[0]][0]
     y1 = vertices[init_points_ids[0]][1]

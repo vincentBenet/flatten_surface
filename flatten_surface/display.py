@@ -6,7 +6,7 @@ from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 
 
-def plot(vertices, faces, unwrap, init_points_pos, plan, init_points_ids, bounds, deformation, path):
+def plot(vertices, faces, unwrap, init_points_pos, plan, init_points_ids, bounds, deformation, path_png):
 
     a, b, c, d = plan
     grid = np.meshgrid(
@@ -37,6 +37,5 @@ def plot(vertices, faces, unwrap, init_points_pos, plan, init_points_ids, bounds
     ax2.set_ylabel('V')
     ax2.axis('equal')
 
-    path_image = os.path.join(os.path.dirname(path), ".".join(os.path.basename(path).split(".")[:-1]))
-    plt.savefig(path_image, dpi=1000)
+    plt.savefig(path_png, dpi=1000)
     plt.show()

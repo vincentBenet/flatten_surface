@@ -1,5 +1,3 @@
-import os
-
 import numpy as np
 import svgwrite
 import trimesh
@@ -13,8 +11,7 @@ def load(path):
     )
 
 
-def export_svg(unwrap, bounds, path):
-    path_svg = os.path.join(os.path.dirname(path), ".".join(os.path.basename(path).split(".")[:-1]) + ".svg")
+def export_svg(unwrap, bounds, path_svg):
     contours = [unwrap[bound] for bound in bounds]
 
     min_x = float("inf")
