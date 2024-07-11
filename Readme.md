@@ -12,7 +12,7 @@ The output is a .SVG file of the flattened surface.
 A graph display area deformation foreach vertices.
 
 ## Operation
-This 3 days project has following steps:
+This project has following steps:
 	- Load STL file as a mesh with trimesh: https://trimesh.org/
 	- Compute all bounds with a faces analysis, based on the function boundary_loop from igl librairy: https://libigl.github.io/libigl-python-bindings/igl_docs/#boundary_loop
 	- Select a vertice and rotate it on a XY plan as initialisation vertice using chatGPT 4.O
